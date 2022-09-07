@@ -4,7 +4,7 @@ function fetchWeatherData(){
     const searchButton = document.getElementById("button-search")
 
 
-    searchButton.addEventListener("click" || "keydown", () => {
+    searchButton.addEventListener("click", () => {
         fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city_name.value}&appid=${API_key}&units=metric`)
         .then(response => response.json())
         .then(response => displayWeatherData(response))
@@ -39,8 +39,26 @@ function displayWeatherData(weatherData){
         <p>Temparature is ${weatherData.main.temp}<sup>o</sup><i>C</i></p>
         <p>Feels like ${weatherData.main["feels_like"]}<sup>o</sup><i>C</i></p> 
         <p>Humidity: ${weatherData.main.humidity}%</p>
-        <p></p>
-    `
-}
+        <form>
+            <input id="name-input" placeholder="Enter your name">
+            <input id="comment-input" placeholder="Comment how you feel">
+            <button id="comment-button" type="submit">Post</button>
+        </form>
+        <ul id="comment-output">
 
+        </ul>
+    `
+    addComment()
+}
+function addComment(){
+    document.addEventListener("submit", (event)=> {
+        event.preventDefault();
+        const userName = document.getElementById("name-input")
+        const userComment = document.getElementById("comment-input")
+        let displayComment = document.getElementById("comment-output")
+        const li = document.createElement("li")
+        li.append(`${userName.value} is feeling ${userComment.value}`)
+        console.log(displayComment.append(li))
+    })
+}
 document.addEventListener("DOMContentLoaded", () => fetchWeatherData())
