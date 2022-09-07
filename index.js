@@ -4,7 +4,7 @@ function fetchWeatherData(){
     const searchButton = document.getElementById("button-search")
 
 
-    searchButton.addEventListener("click", () => {
+    searchButton.addEventListener("click" || "keydown", () => {
         fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city_name.value}&appid=${API_key}&units=metric`)
         .then(response => response.json())
         .then(response => displayWeatherData(response))
