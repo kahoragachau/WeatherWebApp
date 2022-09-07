@@ -19,8 +19,14 @@ function displayWeatherData(weatherData){
     const iconDisplay = weatherData.weather[0].icon
     displayData.innerHTML= `
         <p>The forecast for ${weatherData.name} is:</p>
-        <p>The weather feels like ${weatherData.main["feels_like"]}<sup>o</sup>C</p> 
-        <img src="http://openweathermap.org/img/wn/${iconDisplay}@2x.png" alt="icon">
+        <div class="more-info">
+            <img src="http://openweathermap.org/img/wn/${iconDisplay}@2x.png" alt="icon">
+            <p>Description: ${weatherData.weather[0].description}</p>
+        </div>
+        <p>Temparature is ${weatherData.main.temp}<sup>o</sup><i>C</i></p>
+        <p>Feels like ${weatherData.main["feels_like"]}<sup>o</sup><i>C</i></p> 
+        <p>Humidity: ${weatherData.main.humidity}%</p>
+        <p></p>
     `
 }
 
