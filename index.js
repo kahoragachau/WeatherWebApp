@@ -21,7 +21,7 @@ function displayWeatherData(weatherData){
         <p>The forecast for ${weatherData.name} is:</p>
         <div class="more-info">
             <img src="http://openweathermap.org/img/wn/${iconDisplay}@2x.png" alt="icon">
-            <p>Description: ${weatherData.weather[0].description}</p>
+            <p>${weatherData.weather[0].description}</p>
         </div>
         <p>Temparature is ${weatherData.main.temp}<sup>o</sup><i>C</i></p>
         <p>Feels like ${weatherData.main["feels_like"]}<sup>o</sup><i>C</i></p> 
