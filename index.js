@@ -16,7 +16,12 @@ function displayWeatherData(weatherData){
     console.log(weatherData)
     console.log(weatherData.name)
     const displayData = document.getElementById("output-section")
-    displayData.innerHTML= weatherData.name
+    const iconDisplay = weatherData.weather[0].icon
+    displayData.innerHTML= `
+        <p>The forecast for ${weatherData.name} is:</p>
+        <p>The weather feels like ${weatherData.main["feels_like"]}<sup>o</sup>C</p> 
+        <img src="http://openweathermap.org/img/wn/${iconDisplay}@2x.png" alt="icon">
+    `
 }
 
 
