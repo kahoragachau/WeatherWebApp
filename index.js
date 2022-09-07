@@ -5,7 +5,7 @@ function fetchWeatherData(){
 
 
     searchButton.addEventListener("click", () => {
-        fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city_name.value}&appid=${API_key}`)
+        fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city_name.value}&appid=${API_key}&units=metric`)
         .then(response => response.json())
         .then(response => displayWeatherData(response))
         .catch(err => console.error(err));
