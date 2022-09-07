@@ -10,6 +10,19 @@ function fetchWeatherData(){
         .then(response => displayWeatherData(response))
         .catch(err => console.error(err));
     })
+
+
+    const toggleButton = document.getElementById("toggleDark")
+    toggleButton.addEventListener("click", () =>{
+        const body = document.querySelector("body")
+        body.style.backgroundColor = "black"
+        body.style.color = "white"
+    })
+    document.getElementById("toggleLight").addEventListener("click", ()=> {
+        const body = document.querySelector("body")
+        body.style.backgroundColor = "rgb(168, 164, 164)"
+        body.style.color = "black"
+    })
 }
 
 function displayWeatherData(weatherData){
@@ -29,6 +42,5 @@ function displayWeatherData(weatherData){
         <p></p>
     `
 }
-
 
 document.addEventListener("DOMContentLoaded", () => fetchWeatherData())
