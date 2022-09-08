@@ -46,7 +46,7 @@ function displayWeatherData(weatherData){
             <button id="comment-button" type="submit">Post</button>
         </form>
         <ul id="comment-output"> 
-
+        
         </ul>
     `
     addComment()
