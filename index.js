@@ -51,6 +51,8 @@ function displayWeatherData(weatherData){
     addComment()
 }
 function addComment(){
+    // const li = document.createElement("li")
+    // const brea = document.createElement("br")
     document.addEventListener("submit", (event)=> {
         event.preventDefault();
         const userName = document.getElementById("name-input")
@@ -58,7 +60,12 @@ function addComment(){
         let displayComment = document.getElementById("comment-output")
         const li = document.createElement("li")
         li.append(`${userName.value} is feeling ${userComment.value}`)
-        console.log(displayComment.append(li))
+        displayComment.append(li)
+        
+        // delete on double click
+        li.addEventListener("dblclick", ()=> {
+            displayComment.removeChild(li)
+        })
     })
 }
 document.addEventListener("DOMContentLoaded", () => fetchWeatherData())
