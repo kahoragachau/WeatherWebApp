@@ -39,6 +39,7 @@ function displayWeatherData(weatherData){
         <p>Temparature is ${weatherData.main.temp}<sup>o</sup><i>C</i></p>
         <p>Feels like ${weatherData.main["feels_like"]}<sup>o</sup><i>C</i></p> 
         <p>Humidity: ${weatherData.main.humidity}%</p>
+        <h5> Add A comment. Double click to delete</h5>
         <form>
             <input id="name-input" placeholder="Enter your name">
             <input id="comment-input" placeholder="Comment how you feel">
@@ -61,7 +62,7 @@ function addComment(){
         const li = document.createElement("li")
         li.append(`${userName.value} is feeling ${userComment.value}`)
         displayComment.append(li)
-        
+
         // delete on double click
         li.addEventListener("dblclick", ()=> {
             displayComment.removeChild(li)
