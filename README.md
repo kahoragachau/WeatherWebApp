@@ -15,7 +15,7 @@ If you want to contribute go a head and fork and clone
 - Then `code .`
 - To view in your local machine type `open index.html` in your terminal
 ## LIVE LINK
-[Weather Stats live link](https://kahoragachau.github.io/WeatherWebApp/)
+[Weather Web App live link](https://kahoragachau.github.io/WeatherWebApp/)
 ## Technologies used
 - HTML
 - CSS
