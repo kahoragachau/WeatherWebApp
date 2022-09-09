@@ -1,4 +1,4 @@
-# Weather Stats
+# Weather Web App
 
 ## AUTHORS
 - Joel Kahora Gachau
