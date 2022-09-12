@@ -13,7 +13,7 @@ If you want to contribute go a head and fork and clone
 - Type `git clone git@github.com:kahoragachau/WeatherWebApp.git`
 - Then `cd WeatherWebApp`
 - Then `code .`
-- To view in your local machine type `open index.html` in your terminal
+- To view in your local linux machine type `open index.html` in your terminal if on windows use `explorer.exe index.html`
 ## LIVE LINK
 [Weather Web App live link](https://kahoragachau.github.io/WeatherWebApp/)
 ## Technologies used
